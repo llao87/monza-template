@@ -1,0 +1,101 @@
+header {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    background-color: $black;
+    padding: 4.2rem 19rem 1.8rem;
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 22.5rem;
+        .logo-wrap {
+            .logo-link {
+                .logo-img {
+                    display: inline-block;
+                    max-width: 100%;
+                    max-height: 100%;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    .nav {
+        width: 100%;
+        max-width: 58rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .nav-items {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            list-style-type: none;
+            width: 100%;
+
+            .nav-item {
+                text-transform: uppercase;
+                .nav-link {
+                    color: $white;
+                    text-decoration: none;
+                    font-size: 1.6rem;
+                    letter-spacing: 0.05rem;
+                    font-weight: lighter;
+                }
+            }
+        }
+    }
+
+    .lang-selector {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 22.5rem;
+        padding: 0 0.2rem 0 0;
+
+        .js-example-basic-single {
+        }
+
+        .select2-container--default {
+            .select2-selection--single {
+                border-radius: 4px;
+                background: none;
+                border: none;
+                font-size: 1.8rem;
+                display: inline-block;
+                padding: 0;
+                font-weight: normal;
+
+                .select2-selection__rendered {
+                    color: #fff;
+                    padding: 0 2.6rem 0 0;
+                }
+
+                .select2-selection__arrow {
+                    background-image: url(/img/arrow-lang.svg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: 65%;
+                    transition: transform 0.3s linear;
+                    b {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .select2-container--open {
+            .select2-selection--single {
+                .select2-selection__arrow {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        .select2-container {
+            .select2-dropdown {
+                border: none !important;
+            }
+        }
+    }
+}
