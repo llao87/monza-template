@@ -5,6 +5,33 @@ jQuery(function () {
         minimumResultsForSearch: Infinity,
     });
 
+    // promo slider
+    const partnersCarousel = new Swiper(".promo-slider", {
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        slidesPerView: 1,
+        breakpoints: {
+            // 580: {
+            //     slidesPerView: 1,
+            // },
+            // 768: {
+            //     slidesPerView: 2,
+            // },
+            // 991: {
+            //     slidesPerView: 3,
+            // },
+            // 1180: {
+            //     slidesPerView: 4,
+            // },
+            // 1340: {
+            //     slidesPerView: 5,
+            // },
+        },
+    });
+
     /*
     const partnersCarousel = new Swiper(".partners-slider", {
         loop: true,
