@@ -8,10 +8,10 @@ jQuery(function () {
     // promo slider
     const partnersCarousel = new Swiper(".promo-slider", {
         loop: true,
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-        },
+        // autoplay: {
+        //     delay: 2500,
+        //     disableOnInteraction: false,
+        // },
         slidesPerView: 1,
         breakpoints: {
             // 580: {
@@ -31,6 +31,11 @@ jQuery(function () {
             // },
         },
     });
+
+    const categoriesCaorusel = new Swiper (".js__categories-slider", {
+        loop: false,
+        slidesPerView: 4,
+    })
 
     /*
     const partnersCarousel = new Swiper(".partners-slider", {
