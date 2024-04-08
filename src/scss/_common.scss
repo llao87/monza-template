@@ -33,7 +33,12 @@ body {
     max-width: 186.8rem;
     margin: 0 auto;
 }
-
+.container-overflow {
+    overflow-x: hidden;
+}
+.container-fluid {
+    max-width: 100%;
+}
 .pulse {
     &::after,
     &::before {

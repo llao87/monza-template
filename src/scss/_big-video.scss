@@ -1,0 +1,53 @@
+.video {
+    padding: 19.8rem 0 3rem;
+    .container {
+        .video-box {
+            height: 110.2rem;
+            background-image: url(/img/big-video.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 1.8rem;
+        }
+        .play-btn {
+        }
+    }
+}
+
+.videos {
+    .container {
+        .swiper-block {
+            .swiper {
+                height: 44.5rem;
+                margin-bottom: 10rem;
+                .swiper-wrapper {
+                    height: 100%;
+                    .swiper-slide {
+                        height: 100%;
+                        width: 75.5rem;
+                        border-radius: 1.8rem;
+                        .inner {
+                            width: 100%;
+                            height: 100%;
+                            .title {
+                            }
+                            .bg-slide {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                border-radius: 1.8rem;
+                                overflow: hidden;
+                                filter: blur(0.2rem);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

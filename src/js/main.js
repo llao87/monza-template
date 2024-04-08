@@ -8,6 +8,7 @@ jQuery(function () {
     // promo slider
     const partnersCarousel = new Swiper(".promo-slider", {
         loop: true,
+        spaceBetween: 28,
         // autoplay: {
         //     delay: 2500,
         //     disableOnInteraction: false,
@@ -32,10 +33,59 @@ jQuery(function () {
         },
     });
 
-    const categoriesCaorusel = new Swiper (".js__categories-slider", {
-        loop: false,
-        slidesPerView: 4,
-    })
+    const categoriesCaorusel = new Swiper(".js__categories-slider .swiper", {
+        freeMode: true,
+        speed: 100,
+        spaceBetween: 28,
+        slidesPerView: "auto",
+        mousewheel: {
+            enable: true,
+            invert: false,
+            sensitivity: 1,
+            // eventsTarget: ".swiper-slide:not(.noSwipingClass)",
+        },
+        navigation: {
+            prevEl: ".js__categories-slider .swiper-navigation .prev",
+            nextEl: ".js__categories-slider .swiper-navigation .next",
+        },
+        noSwiping: true,
+        noSwipingSelector: ".noSwipingClass",
+        on: {
+            slideChange: function () {
+                if (mySwiper.activeIndex == 0 && mySwiper.activeIndex != 5) {
+                    $("body").addClass("no_scroll");
+                } else {
+                    $("body").removeClass("no_scroll");
+                }
+            },
+        },
+    });
+
+    const videossCaorusel = new Swiper(".js__videos-slider .swiper", {
+        freeMode: true,
+        speed: 100,
+        spaceBetween: 28,
+        slidesPerView: "auto",
+        mousewheel: {
+            enable: true,
+            invert: false,
+            sensitivity: 1,
+            // eventsTarget: ".swiper-slide:not(.noSwipingClass)",
+        },
+        noSwiping: true,
+        noSwipingSelector: ".noSwipingClass",
+        on: {
+            slideChange: function () {
+                if (mySwiper.activeIndex == 0 && mySwiper.activeIndex != 5) {
+                    $("body").addClass("no_scroll");
+                } else {
+                    $("body").removeClass("no_scroll");
+                }
+            },
+        },
+    });
+
+    
 
     /*
     const partnersCarousel = new Swiper(".partners-slider", {

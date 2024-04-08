@@ -58,3 +58,32 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Commissioner';
+    src: url('/css/fonts/Commissioner-Light.woff2') format('woff2'),
+        url('/css/fonts/Commissioner-Light.woff') format('woff'),
+        url('/css/fonts/Commissioner-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Commissioner';
+    src: url('/css/fonts/Commissioner-Regular.woff2') format('woff2'),
+        url('/css/fonts/Commissioner-Regular.woff') format('woff'),
+        url('/css/fonts/Commissioner-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Commissioner';
+    src: url('/css/fonts/Commissioner-Thin.woff2') format('woff2'),
+        url('/css/fonts/Commissioner-Thin.woff') format('woff'),
+        url('/css/fonts/Commissioner-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
