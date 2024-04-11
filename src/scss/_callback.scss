@@ -1,5 +1,5 @@
 .callback {
-    margin: 2.8rem 0 11.2rem;
+    margin: 2.8rem 0 10.6rem;
     .container {
         .top-screen {
             height: 104rem;
@@ -14,8 +14,7 @@
             display: flex;
             align-items: flex-end;
             justify-content: space-between;
-            margin: -28.8rem 0;
-            padding: 0 0 28.8rem 0;
+            margin: -28.8rem 0 0 0;
             .form-screen {
                 width: 50%;
                 margin-left: 2.8rem;
@@ -58,6 +57,9 @@
                     z-index: 5;
                     border-radius: 1.8rem;
                     padding: 5.4rem 5.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
                     .fields {
                         .field {
                             width: 100%;
@@ -74,13 +76,44 @@
                                 padding: 0.6rem 0;
                             }
                             .input--check {
+                                display: block;
+                                width: 2.2rem;
+                                height: 2.2rem;
+                                margin: 0 1.4rem 0 0;
+                                flex: none;
                             }
                             .agree {
+                                display: block;
+                                font-size: 2.2rem;
+                                line-height: 1.25;
+                                margin: -0.5rem 0 0 0;
+                                max-width: 85%;
                             }
+                        }
+                        .field--agree {
+                            margin: 7.8rem 0 0 0;
+                            display: flex;
+                            align-items: flex-start;
                         }
                     }
                     .controls {
                         .submit {
+                            font-size: 4.2rem;
+                            color: #fff;
+                            background: #444;
+                            padding: 1.9rem 3.4rem;
+                            text-transform: uppercase;
+                            line-height: 1;
+                            font-weight: 300;
+                            letter-spacing: -0.18rem;
+                            border-radius: 1.8rem;
+                            cursor: pointer;
+                            transition: all 0.3s linear;
+
+                            &:hover {
+                                background: #fff;
+                                color: #333;
+                            }
                         }
                     }
                 }
@@ -94,7 +127,6 @@
                 background-position: center;
                 background-size: cover;
                 border-radius: 1.8rem;
-                // margin-right: 1.4rem;
             }
         }
     }
