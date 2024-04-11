@@ -34,10 +34,9 @@ jQuery(function () {
     });
 
     const categoriesCaorusel = new Swiper(".js__categories-slider .swiper", {
-        freeMode: true,
-        speed: 100,
+        speed: 800,
         spaceBetween: 28,
-        slidesPerView: "auto",
+        slidesPerView: 4,
         mousewheel: {
             enable: true,
             invert: false,

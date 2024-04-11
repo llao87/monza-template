@@ -10,22 +10,22 @@
   </head>
   <body class="home">
     <header>
-      <div class="logo"> 
-        <div class="logo-wrap"> <a class="logo-link" href="/"><img class="logo-img" src="/img/logo-top.svg"></a></div>
-      </div>
-      <navigation class="nav">
-        <ul class="nav-items">
-          <li class="nav-item"><a class="nav-link" href="#">О нас</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Каталог</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Партнеры</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Контакты</a></li>
-        </ul>
-      </navigation>
-      <div class="lang-selector">
-        <select class="js-example-basic-single" name="lang">
-          <option value="RU">RU</option>
-          <option value="EN">EN</option>
-        </select>
+      <div class="container">
+        <div class="logo"> <a class="logo-link" href="/"><img class="logo-img" src="/img/logo-top.svg"></a></div>
+        <navigation class="nav">
+          <ul class="nav-items">
+            <li class="nav-item"><a class="nav-link" href="#">О нас</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Каталог</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Партнеры</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Контакты</a></li>
+          </ul>
+        </navigation>
+        <div class="lang-selector"><span class="btn btn--callback js__header-callback"> Связаться с нами</span>
+          <select class="js-example-basic-single" name="lang">
+            <option value="RU">RU</option>
+            <option value="EN">EN</option>
+          </select>
+        </div>
       </div>
     </header>
     <section class="promo">
@@ -98,32 +98,37 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide"> 
                 <div class="inner"> 
-                  <div class="title">Категория 1 </div>
+                  <div class="title">Кухни</div>
                   <div class="bg-slide" style="background-image: url(/img/cat-1.jpg);"></div>
+                  <div class="more js__category-more"></div>
                 </div>
               </div>
               <div class="swiper-slide"> 
                 <div class="inner"> 
-                  <div class="title">Категория 2</div>
+                  <div class="title">Уличная<br>мебель</div>
                   <div class="bg-slide" style="background-image: url(/img/cat-2.jpg);"></div>
+                  <div class="more js__category-more"></div>
                 </div>
               </div>
               <div class="swiper-slide"> 
                 <div class="inner"> 
-                  <div class="title">Категория 3 </div>
+                  <div class="title">Двери<br>и панельные<br>системы</div>
                   <div class="bg-slide" style="background-image: url(/img/cat-3.jpg);"></div>
+                  <div class="more js__category-more"></div>
                 </div>
               </div>
               <div class="swiper-slide"> 
                 <div class="inner"> 
-                  <div class="title">Категория 4 </div>
+                  <div class="title">Гостиные</div>
                   <div class="bg-slide" style="background-image: url(/img/cat-4.jpg);"></div>
+                  <div class="more js__category-more"></div>
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="inner"> 
-                  <div class="title">Категория 5</div>
+                  <div class="title">Кухни</div>
                   <div class="bg-slide" style="background-image: url(/img/cat-5.jpg);"></div>
+                  <div class="more js__category-more"></div>
                 </div>
               </div>
             </div>
@@ -138,8 +143,6 @@
           <li class="partner"> <img class="logo__img" src="/img/partner-cactus.svg"></li>
           <li class="partner"> <img class="logo__img" src="/img/partner-showflake.svg"></li>
           <li class="partner"> <img class="logo__img" src="/img/partner-blossom.svg"></li>
-        </ul>
-        <ul class="partners-list"> 
           <li class="partner"> <img class="logo__img" src="/img/partner-blossom.svg"></li>
           <li class="partner"> <img class="logo__img" src="/img/partner-showflake.svg"></li>
           <li class="partner"> <img class="logo__img" src="/img/partner-cactus.svg"></li>
@@ -153,35 +156,30 @@
         <div class="play-btn"></div>
       </div>
     </section>
-    <section class="videos"> 
-      <div class="container container-overflow">
-        <div class="swiper-block js__videos-slider">
-          <div class="swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide"> 
-                <div class="inner"> 
-                  <div class="bg-slide" style="background-image: url(/img/video-1.jpg);"></div>
+    <section class="callback"> 
+      <div class="container"> 
+        <div class="top-screen"></div>
+        <div class="bottom-screen">
+          <div class="left-block"></div>
+          <div class="form-screen"> 
+            <div class="title">Связаться с нами</div>
+            <div class="form" id="callback">
+              <div class="fields"> 
+                <div class="field"> 
+                  <input class="input--text" placeholder="Имя">
+                </div>
+                <div class="field"> 
+                  <input class="input--text" placeholder="Email" type="email">
+                </div>
+                <div class="field"> 
+                  <input class="input--text" placeholder="+7 (900) 000-00-00" type="tel">
+                </div>
+                <div class="field"> 
+                  <input class="input--text" type="checkbox"><span class="agree">Я согласен(на) с политикой конфиденциальности и даю согласие на обработку персональных данных</span>
                 </div>
               </div>
-              <div class="swiper-slide"> 
-                <div class="inner"> 
-                  <div class="bg-slide" style="background-image: url(/img/video-2.jpg);"></div>
-                </div>
-              </div>
-              <div class="swiper-slide"> 
-                <div class="inner"> 
-                  <div class="bg-slide" style="background-image: url(/img/video-3.jpg);"></div>
-                </div>
-              </div>
-              <div class="swiper-slide"> 
-                <div class="inner"> 
-                  <div class="bg-slide" style="background-image: url(/img/video-1.jpg);"></div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="inner"> 
-                  <div class="bg-slide" style="background-image: url(/img/video-2.jpg);"></div>
-                </div>
+              <div class="controls"> 
+                <input class="submit" type="submit" value="Отправить">
               </div>
             </div>
           </div>

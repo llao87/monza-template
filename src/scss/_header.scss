@@ -1,16 +1,20 @@
 header {
-    display: flex;
-    align-content: center;
-    justify-content: space-between;
     background-color: #1c1d21;
-    padding: 4.2rem 18.5rem 1.8rem 18rem;
-    .logo {
+    padding: 5.1rem 0 5.2rem;
+    .container {
+        padding: 0 5.6rem;
         display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        width: 22.5rem;
-        .logo-wrap {
+        align-content: center;
+        justify-content: space-between;
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
             .logo-link {
+                display: block;
+                width: 31.2rem;
+                height: 3rem;
                 .logo-img {
                     display: inline-block;
                     max-width: 100%;
@@ -20,82 +24,110 @@ header {
                 }
             }
         }
-    }
 
-    .nav {
-        width: 100%;
-        max-width: 58rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        .nav-items {
+        .nav {
+            width: 100%;
+            max-width: 58rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            list-style-type: none;
-            width: 100%;
+            .nav-items {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                list-style-type: none;
+                width: 100%;
 
-            .nav-item {
-                text-transform: uppercase;
-                .nav-link {
-                    color: $white;
-                    text-decoration: none;
-                    font-size: 1.6rem;
-                    letter-spacing: 0.05rem;
-                    font-weight: lighter;
-                }
-            }
-        }
-    }
+                .nav-item {
+                    text-transform: uppercase;
+                    width: 25%;
+                    flex: none;
+                    padding-left: 0.5rem;
 
-    .lang-selector {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        width: 22.5rem;
-        padding: 0 0.2rem 0 0;
+                    .nav-link {
+                        color: $white;
+                        text-decoration: none;
+                        font-size: 1.6rem;
+                        letter-spacing: 0.05rem;
+                        font-weight: 300;
+                        line-height: 1;
 
-        .js-example-basic-single {
-        }
-
-        .select2-container--default {
-            .select2-selection--single {
-                border-radius: 4px;
-                background: none;
-                border: none;
-                font-size: 1.8rem;
-                display: inline-block;
-                padding: 0;
-                font-weight: normal;
-
-                .select2-selection__rendered {
-                    color: #fff;
-                    padding: 0 2.6rem 0 0;
-                }
-
-                .select2-selection__arrow {
-                    background-image: url(/img/arrow-lang.svg);
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: 65%;
-                    transition: transform 0.3s linear;
-                    b {
-                        display: none;
+                        &:hover {
+                            font-weight: 500;
+                        }
                     }
                 }
             }
         }
-        .select2-container--open {
-            .select2-selection--single {
-                .select2-selection__arrow {
-                    transform: rotate(180deg);
+
+        .lang-selector {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            // width: 22.5rem;
+            width: 31.2rem;
+            padding: 0 0.2rem 0 0;
+
+            .js-example-basic-single {
+            }
+
+            .btn {
+                &.btn--callback {
+                    padding: 0.55rem 1.6rem;
                 }
             }
-        }
-        .select2-container {
-            .select2-dropdown {
-                border: none !important;
+
+            .select2-container--default {
+                display: block;
+                margin: 0;
+                .select2-selection--single {
+                    display: inline-block;
+                    font-size: 1.8rem;
+                    color: #fff;
+                    text-transform: uppercase;
+                    border: 0.1rem solid #fff;
+                    border-radius: 10rem;
+                    padding: 0.45rem 0.6rem;
+                    margin: 0;
+
+                    // border-radius: 4px;
+                    background: none;
+                    // border: none;
+                    // font-size: 1.8rem;
+                    display: inline-block;
+                    // padding: 0;
+                    // font-weight: normal;
+
+                    .select2-selection__rendered {
+                        color: #fff;
+                        padding: 0 2.6rem 0 0;
+                    }
+
+                    .select2-selection__arrow {
+                        // background-image: url(/img/arrow-lang.svg);
+                        // background-position: center;
+                        // background-repeat: no-repeat;
+                        // background-size: 65%;
+                        // transition: transform 0.3s linear;
+                        b {
+                            display: none;
+                        }
+                        display: none;
+                    }
+                }
             }
+            // .select2-container--open {
+            //     .select2-selection--single {
+            //         .select2-selection__arrow {
+            //             transform: rotate(180deg);
+            //         }
+            //     }
+            // }
+            // .select2-container {
+            //     .select2-dropdown {
+            //         border: none !important;
+            //     }
+            // }
         }
     }
 }

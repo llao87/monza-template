@@ -1,0 +1,25 @@
+section.callback 
+    .container 
+        .top-screen
+
+        .bottom-screen
+            .left-block
+
+            .form-screen 
+                .title Связаться с нами
+
+                .form#callback
+                    .fields 
+                        .field 
+                            input.input--text(placeholder="Имя")
+                        .field 
+                            input.input--text(placeholder="Email" type="email")
+                        .field 
+                            input.input--text(placeholder="+7 (900) 000-00-00" type="tel")
+
+                        .field 
+                            input.input--text(type="checkbox") 
+                            span.agree Я согласен(на) с политикой конфиденциальности и даю согласие на обработку персональных данных
+
+                    .controls 
+                        input.submit(type="submit" value="Отправить")
