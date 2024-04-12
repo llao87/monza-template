@@ -49,6 +49,38 @@
                         left: 0.4rem;
                         transform: translateX(-100%) rotate(-90deg);
                     }
+
+                    .bg_elem {
+                        position: absolute;
+                        display: block;
+                        width: 24rem;
+                        height: 5rem;
+                        background-color: #1c1d21;
+                        top: 22.6%;
+                        right: -18.6rem;
+                        opacity: 1;
+
+                        &::before,
+                        &::after {
+                            display: block;
+                            position: absolute;
+                            content: "";
+                            background-image: url(/img/triangle.svg);
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            width: 1.8rem;
+                            height: 1.8rem;
+                            top: 0.6rem;
+                            left: 5rem;
+                            transform: translateY(-100%) rotate(0deg);
+                        }
+                        &::after {
+                            transform: translateY(-100%) rotate(-90deg);
+                            left: auto;
+                            right: 0.2rem;
+                        }
+                    }
                 }
 
                 .form#callback {

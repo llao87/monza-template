@@ -65,7 +65,7 @@ header {
             align-items: center;
             justify-content: flex-end;
             // width: 22.5rem;
-            width: 31.2rem;
+            width: 31.2rem !important;
             padding: 0 0.2rem 0 0;
 
             .js-example-basic-single {
@@ -74,7 +74,14 @@ header {
             .btn {
                 &.btn--callback {
                     padding: 0.55rem 1.6rem;
+                    transition: all 0.3s linear;
+
+                    &:hover {
+                        background-color: #fff;
+                        color: #1c1d21;
+                    }
                 }
+                
             }
 
             .select2-container--default {
@@ -100,7 +107,7 @@ header {
 
                     .select2-selection__rendered {
                         color: #fff;
-                        padding: 0 2.6rem 0 0;
+                        padding: 0.55rem 1.2em;
                     }
 
                     .select2-selection__arrow {

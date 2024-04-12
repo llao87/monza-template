@@ -48,10 +48,10 @@
                                         background-size: contain;
                                         background-repeat: no-repeat;
                                         background-position: center;
-                                        width: 1.8rem;
-                                        height: 1.8rem;
-                                        right: 0.4rem;
-                                        bottom: 0.6rem;
+                                        width: 2.4rem;
+                                        height: 2.4rem;
+                                        right: 0.6rem;
+                                        bottom: 0.4rem;
                                         transform: translateX(100%);
                                     }
                                 }
@@ -70,10 +70,10 @@
                                         background-size: contain;
                                         background-repeat: no-repeat;
                                         background-position: center;
-                                        width: 1.8rem;
-                                        height: 1.8rem;
-                                        top: 0.6rem;
-                                        left: 0.4rem;
+                                        width: 2.4rem;
+                                        height: 2.4rem;
+                                        top: 0.4rem;
+                                        left: 0.6rem;
                                         transform: translateX(-100%)
                                             rotate(-180deg);
                                     }
@@ -253,10 +253,10 @@
                         background-size: contain;
                         background-repeat: no-repeat;
                         background-position: center;
-                        width: 1.8rem;
-                        height: 1.8rem;
-                        right: 0.4rem;
-                        top: -0.4rem;
+                        width: 2.4rem;
+                        height: 2.4rem;
+                        right: 0.6rem;
+                        top: -0.6rem;
                         transform: translateX(100%) rotate(90deg);
                     }
                     &::after {
@@ -267,10 +267,10 @@
                         background-size: contain;
                         background-repeat: no-repeat;
                         background-position: center;
-                        width: 1.8rem;
-                        height: 1.8rem;
-                        left: -0.4rem;
-                        bottom: 0.4rem;
+                        width: 2.4rem;
+                        height: 2.4rem;
+                        left: -0.6rem;
+                        bottom: 0.6rem;
                         transform: translate(0, 100%) rotate(90deg);
                     }
                 }

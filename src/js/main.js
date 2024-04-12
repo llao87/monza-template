@@ -84,8 +84,6 @@ jQuery(function () {
         },
     });
 
-    
-
     /*
     const partnersCarousel = new Swiper(".partners-slider", {
         loop: true,
@@ -157,4 +155,15 @@ jQuery(function () {
         }
     });
     */
+
+    /* Запуск видео */
+    jQuery(".js__play-video").on("click", function () {
+        let videoEl = jQuery(this)
+            .parents(".video-box")
+            .find("#showreel_video")
+            .get(0);
+
+        jQuery(this).parents(".overlay").fadeOut(800);
+        videoEl.play();
+    });
 });

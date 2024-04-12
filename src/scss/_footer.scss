@@ -4,7 +4,7 @@ footer {
         .inner {
             padding: 5rem;
             border-radius: 1.8rem;
-            background: #444;
+            background: rgba(217, 217, 217, 0.06);
             display: flex;
             align-items: stretch;
             justify-content: space-between;
@@ -18,10 +18,10 @@ footer {
                 justify-content: space-between;
                 .logo {
                     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 44.2em;
-    text-decoration: none;
+                    align-items: center;
+                    justify-content: center;
+                    width: 44.2em;
+                    text-decoration: none;
                     .logo {
                         width: auto;
                         height: auto;
@@ -29,11 +29,11 @@ footer {
                         max-height: 100%;
                     }
                 }
-                
+
                 .copyrights {
                     color: rgba(230, 230, 230, 0.36);
-    font-size: 1.8rem;
-    line-height: 1;
+                    font-size: 1.8rem;
+                    line-height: 1;
                 }
             }
 
@@ -68,31 +68,37 @@ footer {
                                 margin-bottom: 1.7rem;
                                 .link {
                                     color: rgba(230, 230, 230, 1);
-    line-height: 1;
-    text-decoration: none;
-    font-size: 2.2rem;
-    font-weight: 100;
+                                    line-height: 1;
+                                    text-decoration: none;
+                                    font-size: 2.2rem;
+                                    font-weight: 100;
+                                    &:hover {
+                                        font-weight: 300;
+                                    }
                                 }
                             }
                         }
                     }
                     .confidencial {
                         font-size: 1.8rem;
-    color: rgba(230, 230, 230, 0.38);
-    line-height: 1;
+                        color: rgba(230, 230, 230, 0.38);
+                        line-height: 1;
+
+                        &:hover {
+                            color: #fff;
+                        }
                     }
-                    
                 }
-                    
+
                 .footer-contacts {
                     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    height: 100%;
-    width: 50%;
-    flex: none;
-    padding: 0 0 0 4.6rem;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                    height: 100%;
+                    width: 50%;
+                    flex: none;
+                    padding: 0 0 0 4.6rem;
                     .contacts-wrap {
                         width: 100%;
                         .title {
@@ -112,49 +118,68 @@ footer {
                             margin: 0 0 1.6rem 0;
                             text-decoration: none;
                             letter-spacing: 0.05rem;
+                            &:hover {
+                                font-weight: 300;
+                            }
                         }
                         .mail {
                             font-size: 2.2rem;
                             color: rgba(230, 230, 230, 1);
                             font-weight: 100;
                             text-decoration: none;
+                            &:hover {
+                                font-weight: 300;
+                            }
                         }
 
                         .socials {
                             display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin: 9.8rem 0 7.8rem 0;
+                            align-items: center;
+                            justify-content: flex-start;
+                            margin: 9.8rem 0 7.8rem 0;
                             .soc-link {
                                 width: 5.6rem;
                                 height: 5.6rem;
                                 margin: 0 2.6rem 0 0;
                                 cursor: pointer;
                                 text-decoration: none;
-                                background-color: #fff;
                                 border-radius: 10rem;
                                 background-repeat: no-repeat;
                                 background-position: center;
                                 background-size: contain;
+                                transition: all 0.3s linear;
+
+                                &:hover {
+                                    transform: scale(1.1);
+                                }
                             }
-                            .soc-link__tg {}
-                            .soc-link__wa {}
-                            .soc-link__vk {}
+                            .soc-link__tg {
+                                background-image: url(/img/icon-telegram.svg);
+                            }
+                            .soc-link__wa {
+                                background-image: url(/img/icon-whatsapp.svg);
+                            }
+                            .soc-link__vk {
+                                background-image: url(/img/icon-vk.svg);
+                            }
                         }
                     }
-                    
+
                     .madein {
                         display: flex;
-    align-items: center;
-    justify-content: flex-start;
+                        align-items: center;
+                        justify-content: flex-start;
                         .text {
                             font-size: 1.8rem;
                             color: rgba(230, 230, 230, 0.38);
                             line-height: 1;
                             margin: 0 0.4rem 0 0;
                         }
-                        .logo{
+                        .logo {
                             border-style: none;
+                            display: block;
+                            width: 13.3rem;
+                            height: auto;
                         }
                     }
                 }

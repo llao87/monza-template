@@ -1,21 +1,13 @@
 section.video 
     .container 
         .video-box 
-        .play-btn
-//- section.videos 
-//-     .container
-//-         .swiper-slide 
-//-             .inner 
-//-                 .bg-slide(style="background-image: url(/img/video-1.jpg);")
-//-         .swiper-slide 
-//-             .inner 
-//-                 .bg-slide(style="background-image: url(/img/video-2.jpg);")
-//-         .swiper-slide 
-//-             .inner 
-//-                 .bg-slide(style="background-image: url(/img/video-3.jpg);")
-//-         .swiper-slide 
-//-             .inner 
-//-                 .bg-slide(style="background-image: url(/img/video-1.jpg);")
-//-         .swiper-slide
-//-             .inner 
-//-                 .bg-slide(style="background-image: url(/img/video-2.jpg);")
+            video(pip="false" id="showreel_video" class="video-js" preload="auto"
+                data-setup="{}" tabindex="-1" controls role="application"
+            poster="/img/big-video.jpg"
+            src="https://svet.media/wp-content/uploads/2024/03/showreel_2024_1080.mp4"
+            style="width: 100%; height: auto;")
+                source(src="https://svet.media/wp-content/uploads/2024/03/showreel_2024_1080.mp4" type="video/mp4")
+
+
+            .overlay
+                .play-btn.js__play-video
