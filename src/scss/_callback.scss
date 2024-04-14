@@ -71,7 +71,7 @@
                             background-position: center;
                             width: 1.8rem;
                             height: 1.8rem;
-                            top: 0.6rem;
+                            top: 0.4rem;
                             left: 5rem;
                             transform: translateY(-100%) rotate(0deg);
                         }
@@ -88,7 +88,7 @@
                     height: 69.7rem;
                     z-index: 5;
                     border-radius: 1.8rem;
-                    padding: 5.4rem 5.5rem;
+                    padding: 5.4rem 5.5rem 6rem;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
@@ -132,8 +132,9 @@
                         .submit {
                             font-size: 4.2rem;
                             color: #fff;
-                            background: #444;
-                            padding: 1.9rem 3.4rem;
+                            border: 0.1rem solid #1c1d21;
+                            background-color: #1c1d21;
+                            padding: 1.9rem 3.7rem;
                             text-transform: uppercase;
                             line-height: 1;
                             font-weight: 300;
@@ -144,7 +145,7 @@
 
                             &:hover {
                                 background: #fff;
-                                color: #333;
+                                color: #1c1d21;
                             }
                         }
                     }

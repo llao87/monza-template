@@ -2,8 +2,6 @@
     margin: 11.2rem 0;
     .container {
         .partners-list {
-            display: -webkit-box;
-            display: -ms-flexbox;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -11,6 +9,7 @@
             padding: 2.8rem 0 1rem 0;
             border-radius: 1.8rem;
             background-color: rgba(217, 217, 217, 0.06);
+            border: 0.2rem solid rgba(217, 217, 217, 0.06);
 
             .partner {
                 width: 25%;
@@ -20,11 +19,18 @@
                 justify-content: flex-start;
                 padding: 0 0 0 10rem;
                 margin: 2rem 0 4.4rem 0;
-                .logo__img {
-                    width: auto;
-                    height: auto;
-                    max-width: 100%;
-                    max-height: 100%;
+                .logo-wrap {
+                    width: 26rem;
+                    height: 5.65rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    .logo__img {
+                        width: auto;
+                        height: auto;
+                        max-width: 100%;
+                        max-height: 100%;
+                    }
                 }
             }
         }

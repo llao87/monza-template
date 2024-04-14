@@ -48,6 +48,7 @@ gulp.task("css", async function () {
             "node_modules/swiper/swiper-bundle.min.css",
             "node_modules/lightbox2/dist/css/lightbox.css",
             "node_modules/select2/dist/css/select2.min.css",
+            "node_modules/animate.css/animate.min.css",
         ])
         .pipe(concat("_libs.scss"))
         .pipe(gulp.dest("src/scss"))
@@ -65,11 +66,11 @@ gulp.task("script", async function () {
 gulp.task("js", async function () {
     return gulp
         .src([
-            "node_modules/jquery/dist/jquery.min.js",
-            "node_modules/jquery-ui/dist/jquery-ui.min.js",
+            "node_modules/jquery/dist/jquery.js",
             "node_modules/swiper/swiper-bundle.min.js",
-            "node_modules/lightbox2/dist/js/lightbox.js",
+            // "node_modules/lightbox2/dist/js/lightbox.js",
             "node_modules/select2/dist/js/select2.min.js",
+            "node_modules/wowjs/dist/wow.js",
         ])
         .pipe(concat("libs.min.js"))
         .pipe(uglify())
@@ -88,9 +89,7 @@ gulp.task("browser-sync", async function () {
 gulp.task("export", async function () {
     let buildHtml = gulp.src("src/*.html").pipe(gulp.dest("build"));
 
-    let BuildCss = gulp
-        .src("src/css/**/*.css")
-        .pipe(gulp.dest("build/css"));
+    let BuildCss = gulp.src("src/css/**/*.css").pipe(gulp.dest("build/css"));
 
     let BuildJs = gulp.src("src/js/**/*.js").pipe(gulp.dest("build/js"));
 

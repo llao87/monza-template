@@ -1,162 +1,14 @@
 jQuery(function () {
-    // lang switcher
+    const body = jQuery("body");
+    const modal = jQuery(".js-modal");
+
+    // Переключатель языка
     $(".js-example-basic-single").select2({
         closeOnSelect: true,
         minimumResultsForSearch: Infinity,
     });
 
-    // promo slider
-    const partnersCarousel = new Swiper(".promo-slider", {
-        loop: true,
-        spaceBetween: 28,
-        // autoplay: {
-        //     delay: 2500,
-        //     disableOnInteraction: false,
-        // },
-        slidesPerView: 1,
-        breakpoints: {
-            // 580: {
-            //     slidesPerView: 1,
-            // },
-            // 768: {
-            //     slidesPerView: 2,
-            // },
-            // 991: {
-            //     slidesPerView: 3,
-            // },
-            // 1180: {
-            //     slidesPerView: 4,
-            // },
-            // 1340: {
-            //     slidesPerView: 5,
-            // },
-        },
-    });
-
-    const categoriesCaorusel = new Swiper(".js__categories-slider .swiper", {
-        speed: 800,
-        spaceBetween: 28,
-        slidesPerView: 4,
-        mousewheel: {
-            enable: true,
-            invert: false,
-            sensitivity: 1,
-            // eventsTarget: ".swiper-slide:not(.noSwipingClass)",
-        },
-        navigation: {
-            prevEl: ".js__categories-slider .swiper-navigation .prev",
-            nextEl: ".js__categories-slider .swiper-navigation .next",
-        },
-        noSwiping: true,
-        noSwipingSelector: ".noSwipingClass",
-        on: {
-            slideChange: function () {
-                if (mySwiper.activeIndex == 0 && mySwiper.activeIndex != 5) {
-                    $("body").addClass("no_scroll");
-                } else {
-                    $("body").removeClass("no_scroll");
-                }
-            },
-        },
-    });
-
-    const videossCaorusel = new Swiper(".js__videos-slider .swiper", {
-        freeMode: true,
-        speed: 100,
-        spaceBetween: 28,
-        slidesPerView: "auto",
-        mousewheel: {
-            enable: true,
-            invert: false,
-            sensitivity: 1,
-            // eventsTarget: ".swiper-slide:not(.noSwipingClass)",
-        },
-        noSwiping: true,
-        noSwipingSelector: ".noSwipingClass",
-        on: {
-            slideChange: function () {
-                if (mySwiper.activeIndex == 0 && mySwiper.activeIndex != 5) {
-                    $("body").addClass("no_scroll");
-                } else {
-                    $("body").removeClass("no_scroll");
-                }
-            },
-        },
-    });
-
-    /*
-    const partnersCarousel = new Swiper(".partners-slider", {
-        loop: true,
-        slidesPerView: 5,
-        autoplay: {
-            delay: 1500,
-            disableOnInteraction: false,
-        },
-        breakpoints: {
-            // 580: {
-            //     slidesPerView: 1,
-            // },
-            // 768: {
-            //     slidesPerView: 2,
-            // },
-            // 991: {
-            //     slidesPerView: 3,
-            // },
-            // 1180: {
-            //     slidesPerView: 4,
-            // },
-            // 1340: {
-            //     slidesPerView: 5,
-            // },
-        },
-    });
-
-    const projectsCarousel = new Swiper(".js__projects-slider", {
-        slidesPerView: 1,
-        navigation: {
-            nextEl: ".projects .container .controls .next-project",
-            prevEl: ".projects .container .controls .prev-project",
-        },
-    });
-
-    // прокрутка страницы
-    jQuery(".nav-link").on("click", function (e) {
-        e.preventDefault();
-        let href = jQuery(this).attr("href");
-
-        console.log(document.location.pathname);
-
-        if (document.location.pathname == "/") {
-            if (href == "/") {
-                href = "#promo";
-            }
-
-            if (href.includes("#")) {
-                jQuery(this)
-                    .parents(".container")
-                    .find(".active")
-                    .removeClass("active");
-
-                jQuery("html, body").animate(
-                    {
-                        scrollTop: jQuery(href).stop().offset().top,
-                    },
-                    {
-                        duration: 900,
-                        easing: "linear",
-                    }
-                );
-            } else {
-                document.location.href = href;
-            }
-        } else {
-            href = href.includes("#") ? "/" + href : href;
-            document.location.href = href;
-        }
-    });
-    */
-
-    /* Запуск видео */
+    // Запуск видео
     jQuery(".js__play-video").on("click", function () {
         let videoEl = jQuery(this)
             .parents(".video-box")
@@ -165,5 +17,110 @@ jQuery(function () {
 
         jQuery(this).parents(".overlay").fadeOut(800);
         videoEl.play();
+    });
+
+    // Маска телефона в форме обратной связи
+    // jQuery('[type="tel"]').inputmask("+7 (999) 999-99-99");
+
+    // Запуск анимации при прокрутке
+    const wow = new WOW({
+        boxClass: "wow" /* класс, который необходим для работы wow.js */,
+        animateClass:
+            "animate__animated" /* класс, который будет автоматически добавляться анимируемым элементам при прокрутке страницы */,
+        offset: 30 /* по-умолчанию установлено значение 0, то есть как только при прокрутке страницы, элемент достигает низа окна браузера проигрываться анимация, в данном случае анимация начнется на 30px выше от низа окна браузера */,
+        mobile: true /* если true, то на мобильных тоже будет анимация, если false, то на мобильных анимация отключается */,
+        live: true /* если true, то анимация будет работать даже на динамически добавляемых элементах, если false, то только на тех элементах, которые были на странице при ее загрузке */,
+    });
+    wow.init(); /* Инициализация плагина с установленными выше свойствами */
+
+    // Карусель в промо блоке
+    const promoCarousel = new Swiper(".promo-slider", {
+        loop: true,
+        spaceBetween: 28,
+        slidesPerView: 1,
+        breakpoints: {
+            // 580: {
+            //     slidesPerView: 1,
+            // },
+            // 768: {
+            //     slidesPerView: 2,
+            // },
+            // 991: {
+            //     slidesPerView: 3,
+            // },
+            // 1180: {
+            //     slidesPerView: 4,
+            // },
+            // 1340: {
+            //     slidesPerView: 5,
+            // },
+        },
+        navigation: {
+            nextEl: ".promo-slider-wrap .promo__controls .slider-arrow.next",
+            prevEl: ".promo-slider-wrap .promo__controls .slider-arrow.prev",
+        },
+        pagination: {
+            el: ".promo-slider-wrap .promo__dots",
+            clickable: true,
+        },
+    });
+
+    // Карусель категорий
+    const categoriesCarousel = new Swiper(".js__categories-slider .swiper", {
+        speed: 800,
+        spaceBetween: 28,
+        slidesPerView: 4,
+        mousewheel: {
+            enable: true,
+        },
+        navigation: {
+            prevEl: ".js__categories-slider .swiper-navigation .prev",
+            nextEl: ".js__categories-slider .swiper-navigation .next",
+        },
+    });
+
+    // Запуск модального окна
+    jQuery(".js__category-more").on("click", function (e) {
+        e.preventDefault();
+
+        if (!body.hasClass("fixed")) {
+            body.addClass("fixed");
+        }
+
+        modal.fadeIn();
+    });
+
+    jQuery(".js__close-modal").on("click", function (e) {
+        e.preventDefault();
+
+        if (body.hasClass("fixed")) {
+            body.removeClass("fixed");
+        }
+
+        modal.fadeOut();
+    });
+
+    // Родительский слайдер в модальном окне
+    const categoriesModalSlider = new Swiper(".nested-slider-parent", {
+        loop: true,
+        spaceBetween: 28,
+        slidesPerView: 1,
+        navigation: {
+            prevEl: ".nested-slider-parent .parent-slider-navigation > .prev",
+            nextEl: ".nested-slider-parent .parent-slider-navigation > .next",
+        },
+    });
+
+    // Вложенный слайдер в модальном окне
+    const categoriesModalInSlider = new Swiper(".nested-slider-child", {
+        loop: true,
+        nested: true,
+
+        spaceBetween: 28,
+        slidesPerView: 1,
+        navigation: {
+            prevEl: ".nested-slider-child .nested-slider-navigation > .prev",
+            nextEl: ".nested-slider-child .nested-slider-navigation > .next",
+        },
     });
 });
