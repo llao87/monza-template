@@ -5856,6 +5856,79 @@ body.fixed {
   padding: 0.4175rem 1.6rem;
 }
 
+.touch-point {
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  background-image: url(/img/icon-hover-point.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  opacity: 1;
+  -webkit-transition: all 0.8s ease-out;
+  transition: all 0.8s ease-out;
+}
+.touch-point .info {
+  display: block;
+  position: absolute;
+  width: 26rem;
+  padding: 1.4rem 1.8rem;
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
+  top: 6.5rem;
+  left: -5rem;
+  min-height: 10rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 2rem 0 2rem 0;
+  border-top: 0.18rem solid #fff;
+  border-left: 0.18rem solid #fff;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  -webkit-backdrop-filter: blur(1.2rem);
+          backdrop-filter: blur(1.2rem);
+}
+.touch-point .info .info__text {
+  display: block;
+  font-size: 1.6rem;
+  color: #fff;
+  font-weight: 600;
+}
+.touch-point .info .info__text .title {
+  display: inline-block;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 0.3rem #717070;
+}
+.touch-point .info .info__text .text {
+  line-height: 1.35;
+  font-weight: 400;
+  text-shadow: 0 0 0.3rem #717070;
+}
+.touch-point .info::after {
+  display: block;
+  position: absolute;
+  content: "";
+  height: 0.14rem;
+  background-color: #fff;
+  width: 8.2rem;
+  -webkit-transform: rotate(-212.8deg);
+      -ms-transform: rotate(-212.8deg);
+          transform: rotate(-212.8deg);
+  -webkit-transform-origin: 100% 0%;
+      -ms-transform-origin: 100% 0%;
+          transform-origin: 100% 0%;
+  top: 0;
+  right: 0;
+}
+.touch-point:hover .info {
+  opacity: 1;
+  visibility: visible;
+}
+
 header {
   background-color: #1c1d21;
   padding: 5.8rem 0 5.4rem;
@@ -6130,74 +6203,6 @@ header .container .lang-selector .select2-container--default .selection .select2
       -ms-transform: translateX(-100%) rotate(-180deg);
           transform: translateX(-100%) rotate(-180deg);
 }
-.promo .container .promo-slider-wrap .promo-slider .swiper-wrapper .swiper-slide .slider-inner .touch-point {
-  position: absolute;
-  width: 4rem;
-  height: 4rem;
-  background-image: url(/img/icon-hover-point.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  cursor: pointer;
-  opacity: 1;
-  -webkit-transition: all 0.8s ease-out;
-  transition: all 0.8s ease-out;
-}
-.promo .container .promo-slider-wrap .promo-slider .swiper-wrapper .swiper-slide .slider-inner .touch-point .info {
-  display: block;
-  position: absolute;
-  width: 26rem;
-  padding: 1.4rem 1.8rem;
-  -webkit-transform: translateX(-100%);
-      -ms-transform: translateX(-100%);
-          transform: translateX(-100%);
-  top: 6.5rem;
-  min-height: 10rem;
-  left: -5rem;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 2rem 0 2rem 0;
-  border-top: 0.18rem solid #fff;
-  border-left: 0.18rem solid #fff;
-  visibility: hidden;
-  opacity: 0;
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-  -webkit-backdrop-filter: blur(1.2rem);
-          backdrop-filter: blur(1.2rem);
-}
-.promo .container .promo-slider-wrap .promo-slider .swiper-wrapper .swiper-slide .slider-inner .touch-point .info .info__text {
-  display: block;
-  font-size: 1.6rem;
-  color: #fff;
-  font-weight: 600;
-}
-.promo .container .promo-slider-wrap .promo-slider .swiper-wrapper .swiper-slide .slider-inner .touch-point .info .info__text .title {
-  display: inline-block;
-  text-transform: uppercase;
-  margin-bottom: 1.5rem;
-  text-shadow: 0 0 0.3rem #717070;
-}
-.promo .container .promo-slider-wrap .promo-slider .swiper-wrapper .swiper-slide .slider-inner .touch-point .info .info__text .text {
-  line-height: 1.35;
-  font-weight: 400;
-  text-shadow: 0 0 0.3rem #717070;
-}
-.promo .container .promo-slider-wrap .promo-slider .swiper-wrapper .swiper-slide .slider-inner .touch-point .info::after {
-  display: block;
-  position: absolute;
-  content: "";
-  height: 0.14rem;
-  background-color: #fff;
-  width: 8.2rem;
-  -webkit-transform: rotate(-212.8deg);
-      -ms-transform: rotate(-212.8deg);
-          transform: rotate(-212.8deg);
-  -webkit-transform-origin: 100% 0%;
-      -ms-transform-origin: 100% 0%;
-          transform-origin: 100% 0%;
-  top: 0;
-  right: 0;
-}
 .promo .container .promo-slider-wrap .promo-slider .swiper-wrapper .swiper-slide .slider-inner .touch-point--1 {
   left: 71.5%;
   top: 15%;
@@ -6209,10 +6214,6 @@ header .container .lang-selector .select2-container--default .selection .select2
 .promo .container .promo-slider-wrap .promo-slider .swiper-wrapper .swiper-slide .slider-inner .touch-point--3 {
   top: 64%;
   left: 88.5%;
-}
-.promo .container .promo-slider-wrap .promo-slider .swiper-wrapper .swiper-slide .slider-inner .touch-point:hover .info {
-  opacity: 1;
-  visibility: visible;
 }
 .promo .container .promo-slider-wrap .promo__controls {
   position: absolute;
@@ -6276,7 +6277,6 @@ header .container .lang-selector .select2-container--default .selection .select2
 .promo .container .promo-slider-wrap .promo__dots .swiper-pagination-bullet {
   width: 4.5rem;
   height: 0.3rem;
-  background: #606060;
   margin: 0 0.25rem !important;
   border-radius: 5rem;
   opacity: 1;
@@ -6545,18 +6545,24 @@ header .container .lang-selector .select2-container--default .selection .select2
 }
 
 .modal.js-modal {
+  display: none;
   background-color: #1c1d21;
-  position: relative;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
   z-index: 50;
 }
 .modal.js-modal .container {
   padding: 2.2rem;
   width: 190.3rem;
   margin: 0 auto;
-  height: 122.8rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: 92.8rem;
 }
 .modal.js-modal .container .swiper.nested-slider-parent {
   width: 100%;
@@ -6604,39 +6610,33 @@ header .container .lang-selector .select2-container--default .selection .select2
 }
 .modal.js-modal .container .swiper.nested-slider-parent .swiper-wrapper .swiper-slide .swiper.nested-slider-child .nested-slider-navigation {
   position: absolute;
-  width: 95%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   height: 0;
   top: 50%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
-  z-index: 100;
+  -webkit-transform: translateY(-2rem);
+      -ms-transform: translateY(-2rem);
+          transform: translateY(-2rem);
+  z-index: 50;
+  cursor: pointer;
+  padding: 0 4rem;
+  margin: 6.5rem 0;
+  cursor: pointer;
 }
 .modal.js-modal .container .swiper.nested-slider-parent .swiper-wrapper .swiper-slide .swiper.nested-slider-child .nested-slider-navigation .swiper-button {
-  display: block;
-  background-image: url(/img/btn-modal-close.svg);
+  width: 4rem;
+  height: 3rem;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100%;
-  position: absolute;
-  width: 7rem;
-  height: 7rem;
-  top: 2.2rem;
-  right: 2.2rem;
-  cursor: pointer;
-  background-color: #1c1d21;
-  border-radius: 0 0 0 2.4rem;
-  z-index: 100;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
@@ -6645,11 +6645,37 @@ header .container .lang-selector .select2-container--default .selection .select2
       -ms-transform: scale(1.2);
           transform: scale(1.2);
 }
-.modal.js-modal .container .swiper.nested-slider-parent .swiper-wrapper .swiper-slide .swiper.nested-slider-child .nested-slider-navigation .swiper-button.prev {
+.modal.js-modal .container .swiper.nested-slider-parent .swiper-wrapper .swiper-slide .swiper.nested-slider-child .nested-slider-navigation .prev {
   background-image: url(/img/promo-prev.svg);
 }
-.modal.js-modal .container .swiper.nested-slider-parent .swiper-wrapper .swiper-slide .swiper.nested-slider-child .nested-slider-navigation .swiper-button.next {
+.modal.js-modal .container .swiper.nested-slider-parent .swiper-wrapper .swiper-slide .swiper.nested-slider-child .nested-slider-navigation .next {
   background-image: url(/img/promo-next.svg);
+}
+.modal.js-modal .container .swiper.nested-slider-parent .swiper-wrapper .swiper-slide .swiper.nested-slider-child .nested__dots {
+  position: absolute;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  bottom: 3rem;
+  height: 0;
+  z-index: 50;
+}
+.modal.js-modal .container .swiper.nested-slider-parent .swiper-wrapper .swiper-slide .swiper.nested-slider-child .nested__dots .swiper-pagination-bullet {
+  width: 4.5rem;
+  height: 0.2rem;
+  margin: 0 0.25rem !important;
+  border-radius: 5rem;
+  opacity: 1;
+}
+.modal.js-modal .container .swiper.nested-slider-parent .swiper-wrapper .swiper-slide .swiper.nested-slider-child .nested__dots .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #fff;
 }
 .modal.js-modal .container .swiper.nested-slider-parent .parent-slider-navigation {
   position: absolute;
@@ -6660,24 +6686,96 @@ header .container .lang-selector .select2-container--default .selection .select2
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   height: 0;
-  bottom: 2rem;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
+  bottom: 0;
   z-index: 100;
 }
 .modal.js-modal .container .swiper.nested-slider-parent .parent-slider-navigation .swiper-button {
-  width: 5rem;
-  height: 5rem;
-  background: #ec09a8;
+  display: block;
+  background-position: 62.5% 52.5%;
+  background-repeat: no-repeat;
+  background-size: 75%;
+  width: 7.4rem;
+  height: 7.4rem;
+  bottom: 0;
   cursor: pointer;
+  background-color: #1c1d21;
+  z-index: 100;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
-.modal.js-modal .close-modal {
+.modal.js-modal .container .swiper.nested-slider-parent .parent-slider-navigation .swiper-button.prev {
+  border-radius: 0 2.4rem 0 0;
+  background-image: url(/img/icon-slider-prev.svg);
+}
+.modal.js-modal .container .swiper.nested-slider-parent .parent-slider-navigation .swiper-button.prev:hover {
+  background-image: url(/img/icon-slider-prev-hover.svg);
+}
+.modal.js-modal .container .swiper.nested-slider-parent .parent-slider-navigation .swiper-button.prev::before, .modal.js-modal .container .swiper.nested-slider-parent .parent-slider-navigation .swiper-button.prev::after {
+  display: block;
+  position: absolute;
+  content: "";
+  background-image: url(/img/triangle.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 1.8rem;
+  height: 1.8rem;
+  left: 0rem;
+  top: 0.4rem;
+  -webkit-transform: translateY(-100%) rotate(0deg);
+      -ms-transform: translateY(-100%) rotate(0deg);
+          transform: translateY(-100%) rotate(0deg);
+}
+.modal.js-modal .container .swiper.nested-slider-parent .parent-slider-navigation .swiper-button.prev::after {
+  top: auto;
+  left: auto;
+  right: auto;
+  right: -1.4rem;
+  bottom: 0;
+  top: auto;
+  -webkit-transform: translateY(0) rotate(0deg);
+      -ms-transform: translateY(0) rotate(0deg);
+          transform: translateY(0) rotate(0deg);
+}
+.modal.js-modal .container .swiper.nested-slider-parent .parent-slider-navigation .swiper-button.next {
+  border-radius: 2.4rem 0 0 0;
+  background-image: url(/img/icon-slider-next.svg);
+}
+.modal.js-modal .container .swiper.nested-slider-parent .parent-slider-navigation .swiper-button.next:hover {
+  background-image: url(/img/icon-slider-next-hover.svg);
+}
+.modal.js-modal .container .swiper.nested-slider-parent .parent-slider-navigation .swiper-button.next::before, .modal.js-modal .container .swiper.nested-slider-parent .parent-slider-navigation .swiper-button.next::after {
+  display: block;
+  position: absolute;
+  content: "";
+  background-image: url(/img/triangle.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 1.8rem;
+  height: 1.8rem;
+  right: 0rem;
+  top: 0.4rem;
+  -webkit-transform: translateY(-100%) rotate(-90deg);
+      -ms-transform: translateY(-100%) rotate(-90deg);
+          transform: translateY(-100%) rotate(-90deg);
+}
+.modal.js-modal .container .swiper.nested-slider-parent .parent-slider-navigation .swiper-button.next::after {
+  top: auto;
+  left: auto;
+  right: auto;
+  left: -1.4rem;
+  bottom: 0;
+  top: auto;
+  -webkit-transform: translateY(0) rotate(-90deg);
+      -ms-transform: translateY(0) rotate(-90deg);
+          transform: translateY(0) rotate(-90deg);
+}
+.modal.js-modal .container .close-modal {
   display: block;
   background-image: url(/img/btn-modal-close.svg);
   background-position: center;
@@ -6695,10 +6793,10 @@ header .container .lang-selector .select2-container--default .selection .select2
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
-.modal.js-modal .close-modal:hover {
+.modal.js-modal .container .close-modal:hover {
   background-size: 110%;
 }
-.modal.js-modal .close-modal::before, .modal.js-modal .close-modal::after {
+.modal.js-modal .container .close-modal::before, .modal.js-modal .container .close-modal::after {
   display: block;
   position: absolute;
   content: "";
@@ -6714,7 +6812,7 @@ header .container .lang-selector .select2-container--default .selection .select2
       -ms-transform: translateY(0%) rotate(180deg);
           transform: translateY(0%) rotate(180deg);
 }
-.modal.js-modal .close-modal::after {
+.modal.js-modal .container .close-modal::after {
   top: auto;
   left: auto;
   right: -0.1rem;

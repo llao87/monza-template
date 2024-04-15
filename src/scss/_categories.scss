@@ -128,22 +128,23 @@
 }
 
 .modal.js-modal {
-    // display: none;
+    display: none;
     background-color: #1c1d21;
-    // position: fixed;
-    position: relative;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    // width: 100vw;
-    // height: 100vh;
+    // width: 100%;
+    width: 100vw;
+    height: 100vh;
     z-index: 50;
 
     .container {
         padding: 2.2rem;
         width: 190.3rem;
         margin: 0 auto;
-        height: 122.8rem;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 92.8rem;
 
         .swiper.nested-slider-parent {
             width: 100%;
@@ -192,42 +193,58 @@
                         }
                         .nested-slider-navigation {
                             position: absolute;
-                            width: 95%;
+                            width: 100%;
                             display: flex;
-                            justify-content: space-between;
                             align-items: center;
+                            justify-content: space-between;
                             height: 0;
                             top: 50%;
-                            left: 50%;
-                            transform: translateX(-50%);
-                            z-index: 100;
+                            transform: translateY(-2rem);
+                            z-index: 50;
+                            cursor: pointer;
+                            padding: 0 4rem;
+                            margin: 6.5rem 0;
+                            cursor: pointer;
+
                             .swiper-button {
-                                display: block;
-                                background-image: url(/img/btn-modal-close.svg);
+                                width: 4rem;
+                                height: 3rem;
+                                background-size: contain;
                                 background-position: center;
                                 background-repeat: no-repeat;
-                                background-size: 100%;
-                                position: absolute;
-                                width: 7rem;
-                                height: 7rem;
-                                top: 2.2rem;
-                                right: 2.2rem;
-                                cursor: pointer;
-                                background-color: #1c1d21;
-                                border-radius: 0 0 0 2.4rem;
-                                z-index: 100;
-                                -webkit-transition: all 0.3s linear;
                                 transition: all 0.3s linear;
-
                                 &:hover {
                                     transform: scale(1.2);
                                 }
                             }
-                            .swiper-button.prev {
+                            .prev {
                                 background-image: url(/img/promo-prev.svg);
                             }
-                            .swiper-button.next {
+                            .next {
                                 background-image: url(/img/promo-next.svg);
+                            }
+                        }
+
+                        .nested__dots {
+                            position: absolute;
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            bottom: 3rem;
+                            height: 0;
+                            z-index: 50;
+
+                            .swiper-pagination-bullet {
+                                width: 4.5rem;
+                                height: 0.2rem;
+                                margin: 0 0.25rem !important;
+                                border-radius: 5rem;
+                                opacity: 1;
+
+                                &.swiper-pagination-bullet-active {
+                                    background: #fff;
+                                }
                             }
                         }
                     }
@@ -238,68 +255,136 @@
                 width: 100%;
                 display: flex;
                 justify-content: space-between;
-                align-items: center;
+                align-items: flex-end;
                 height: 0;
-                bottom: 2rem;
-                left: 50%;
-                transform: translateX(-50%);
+                bottom: 0;
                 z-index: 100;
                 .swiper-button {
-                    width: 5rem;
-                    height: 5rem;
-                    background: #ec09a8;
+                    display: block;
+                    background-position: 62.5% 52.5%;
+                    background-repeat: no-repeat;
+                    background-size: 75%;
+                    width: 7.4rem;
+                    height: 7.4rem;
+                    bottom: 0;
                     cursor: pointer;
+                    background-color: #1c1d21;
+                    z-index: 100;
+                    transition: all 0.3s linear;
                 }
                 .swiper-button.prev {
+                    border-radius: 0 2.4rem 0 0;
+                    background-image: url(/img/icon-slider-prev.svg);
+
+                    &:hover {
+                        background-image: url(/img/icon-slider-prev-hover.svg);
+                    }
+
+                    &::before,
+                    &::after {
+                        display: block;
+                        position: absolute;
+                        content: "";
+                        background-image: url(/img/triangle.svg);
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        width: 1.8rem;
+                        height: 1.8rem;
+                        left: 0rem;
+                        top: 0.4rem;
+                        transform: translateY(-100%) rotate(0deg);
+                    }
+                    &::after {
+                        top: auto;
+                        left: auto;
+                        right: auto;
+                        right: -1.4rem;
+                        bottom: 0;
+                        top: auto;
+                        transform: translateY(0) rotate(0deg);
+                    }
                 }
                 .swiper-button.next {
+                    border-radius: 2.4rem 0 0 0;
+                    background-image: url(/img/icon-slider-next.svg);
+
+                    &:hover {
+                        background-image: url(/img/icon-slider-next-hover.svg);
+                    }
+
+                    &::before,
+                    &::after {
+                        display: block;
+                        position: absolute;
+                        content: "";
+                        background-image: url(/img/triangle.svg);
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        width: 1.8rem;
+                        height: 1.8rem;
+                        right: 0rem;
+                        top: 0.4rem;
+                        transform: translateY(-100%) rotate(-90deg);
+                    }
+                    &::after {
+                        top: auto;
+                        left: auto;
+                        right: auto;
+                        left: -1.4rem;
+                        bottom: 0;
+                        top: auto;
+                        transform: translateY(0) rotate(-90deg);
+                    }
                 }
             }
         }
-    }
-    .close-modal {
-        display: block;
-        background-image: url(/img/btn-modal-close.svg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 100%;
 
-        position: absolute;
-        width: 7rem;
-        height: 7rem;
-        top: 2.2rem;
-        right: 2.2rem;
-        cursor: pointer;
-        background-color: #1c1d21;
-        border-radius: 0 0 0 2.4rem;
-        z-index: 100;
-        transition: all 0.3s linear;
-
-        &:hover {
-            background-size: 110%;
-        }
-
-        &::before,
-        &::after {
+        .close-modal {
             display: block;
-            position: absolute;
-            content: "";
-            background-image: url(/img/triangle.svg);
-            background-size: contain;
-            background-repeat: no-repeat;
+            background-image: url(/img/btn-modal-close.svg);
             background-position: center;
-            width: 1.8rem;
-            height: 1.8rem;
-            left: -1.3rem;
-            top: 0;
-            transform: translateY(0%) rotate(180deg);
-        }
-        &::after {
-            top: auto;
-            left: auto;
-            right: -0.1rem;
-            bottom: -1.3rem;
-            transform: translateY(0) rotate(180deg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+
+            position: absolute;
+            width: 7rem;
+            height: 7rem;
+            top: 2.2rem;
+            right: 2.2rem;
+            cursor: pointer;
+            background-color: #1c1d21;
+            border-radius: 0 0 0 2.4rem;
+            z-index: 100;
+            transition: all 0.3s linear;
+
+            &:hover {
+                background-size: 110%;
+            }
+
+            &::before,
+            &::after {
+                display: block;
+                position: absolute;
+                content: "";
+                background-image: url(/img/triangle.svg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 1.8rem;
+                height: 1.8rem;
+                left: -1.3rem;
+                top: 0;
+                transform: translateY(0%) rotate(180deg);
+            }
+            &::after {
+                top: auto;
+                left: auto;
+                right: -0.1rem;
+                bottom: -1.3rem;
+                transform: translateY(0) rotate(180deg);
+            }
         }
     }
 }

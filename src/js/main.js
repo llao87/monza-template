@@ -122,5 +122,9 @@ jQuery(function () {
             prevEl: ".nested-slider-child .nested-slider-navigation > .prev",
             nextEl: ".nested-slider-child .nested-slider-navigation > .next",
         },
+        pagination: {
+            el: ".nested-slider-child .promo__dots",
+            clickable: true,
+        },
     });
 });
