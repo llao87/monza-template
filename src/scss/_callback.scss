@@ -2,7 +2,8 @@
     margin: 2.8rem 0 10.6rem;
     .container {
         .top-screen {
-            height: 104rem;
+            // height: 104rem;
+            height: 64rem;
             background-image: url(/img/bottom-form-bg.jpg);
             background-repeat: no-repeat;
             background-position: center;
@@ -71,14 +72,14 @@
                             background-position: center;
                             width: 1.8rem;
                             height: 1.8rem;
-                            top: 0.4rem;
+                            top: 0.45rem;
                             left: 5rem;
                             transform: translateY(-100%) rotate(0deg);
                         }
                         &::after {
                             transform: translateY(-100%) rotate(-90deg);
                             left: auto;
-                            right: 0.2rem;
+                            right: 0.15rem;
                         }
                     }
                 }
@@ -113,7 +114,12 @@
                                 height: 2.2rem;
                                 margin: 0 1.4rem 0 0;
                                 flex: none;
+
+                                &:focus:checked {
+                                    background-color: #1c1d21;
+                                }
                             }
+
                             .agree {
                                 display: block;
                                 font-size: 2.2rem;

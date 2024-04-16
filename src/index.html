@@ -14,10 +14,10 @@
         <div class="logo"> <a class="logo-link" href="/"><img class="logo-img" src="/img/logo-top.svg"/></a></div>
         <navigation class="nav">
           <ul class="nav-items">
-            <li class="nav-item"><a class="nav-link" href="#">О нас</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Каталог</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Партнеры</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Контакты</a></li>
+            <li class="nav-item"><a class="nav-link" href="about">О нас</a></li>
+            <li class="nav-item"><a class="nav-link" href="catalog">Каталог</a></li>
+            <li class="nav-item"><a class="nav-link" href="partners">Партнеры</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacts">Контакты</a></li>
           </ul>
         </navigation>
         <div class="lang-selector"><span class="btn btn--callback js__header-callback"> Связаться с нами</span>
@@ -28,7 +28,7 @@
         </div>
       </div>
     </header>
-    <section class="promo">
+    <section class="promo wow animate__animated animate__fadeIn" data-wow-duration="4s">
       <div class="container">
         <div class="promo-slider-wrap">
           <div class="promo-slider swiper"> 
@@ -203,7 +203,7 @@
         </div>
       </div>
     </section>
-    <section class="third-second wow animate__animated animate__fadeInUp">
+    <section class="third-second wow animate__animated animate__fadeInUp" id="about" data-wow-duration="3s">
       <div class="container"> 
         <div class="col col-left">
           <div class="inner">
@@ -222,7 +222,7 @@
         </div>
       </div>
     </section>
-    <section class="categories wow animate__animated animate__fadeInUp scrollable">
+    <section class="categories wow animate__animated animate__fadeInUp scrollable" id="catalog" data-wow-duration="3s">
       <div class="container container-overflow">
         <div class="swiper-block js__categories-slider">
           <div class="swiper-navigation">
@@ -385,17 +385,17 @@
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
                     <div class="inner">
-                      <div class="bg-slide" style="background-image:url(/img/categories-slider-01.jpg)"></div>
+                      <div class="bg-slide" style="background-image:url(/img/video-1.jpg)"></div>
                     </div>
                   </div>
                   <div class="swiper-slide">
                     <div class="inner">
-                      <div class="bg-slide" style="background-image:url(/img/categories-slider-01.jpg)"></div>
+                      <div class="bg-slide" style="background-image:url(/img/video-2.jpg)"></div>
                     </div>
                   </div>
                   <div class="swiper-slide">
                     <div class="inner">
-                      <div class="bg-slide" style="background-image:url(/img/categories-slider-01.jpg)"></div>
+                      <div class="bg-slide" style="background-image:url(/img/bottom-form-bg.jpg)"></div>
                     </div>
                   </div>
                 </div>
@@ -411,17 +411,17 @@
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
                     <div class="inner">
-                      <div class="bg-slide" style="background-image:url(/img/categories-slider-01.jpg)"></div>
+                      <div class="bg-slide" style="background-image:url(/img/video-1.jpg)"></div>
                     </div>
                   </div>
                   <div class="swiper-slide">
                     <div class="inner">
-                      <div class="bg-slide" style="background-image:url(/img/categories-slider-01.jpg)"></div>
+                      <div class="bg-slide" style="background-image:url(/img/video-2.jpg)"></div>
                     </div>
                   </div>
                   <div class="swiper-slide">
                     <div class="inner">
-                      <div class="bg-slide" style="background-image:url(/img/categories-slider-01.jpg)"></div>
+                      <div class="bg-slide" style="background-image:url(/img/bottom-form-bg.jpg)"></div>
                     </div>
                   </div>
                 </div>
@@ -441,7 +441,7 @@
         <div class="close-modal js__close-modal"> </div>
       </div>
     </div>
-    <section class="partners wow animate__animated animate__fadeInUp">
+    <section class="partners wow animate__animated animate__fadeInUp" id="partners" data-wow-duration="3s">
       <div class="container"> 
         <ul class="partners-list"> 
           <li class="partner">
@@ -471,7 +471,7 @@
         </ul>
       </div>
     </section>
-    <section class="video wow animate__animated animate__fadeInUp">
+    <section class="video wow animate__animated animate__fadeInUp" data-wow-duration="3s">
       <div class="container"> 
         <div class="video-box"> 
           <div class="overlay" style="background-image: url(/img/big-video.jpg)">
@@ -483,13 +483,13 @@
         </div>
       </div>
     </section>
-    <section class="callback wow animate__animated animate__fadeInUp">
+    <section class="callback wow animate__animated animate__fadeInUp" data-wow-duration="3s">
       <div class="container"> 
         <div class="top-screen"></div>
         <div class="bottom-screen">
           <div class="left-block"></div>
           <div class="form-screen"> 
-            <div class="title">Связаться с нами<span class="bg_elem"> </span></div>
+            <div class="title" id="contacts">Связаться с нами<span class="bg_elem"> </span></div>
             <div class="form" id="callback">
               <div class="fields"> 
                 <div class="field"> 
@@ -513,7 +513,7 @@
         </div>
       </div>
     </section>
-    <footer class="wow animate__animated animate__fadeInUp" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="50" data-wow-iteration="1">
+    <footer class="wow animate__animated animate__fadeInUp" data-wow-duration="3s">
       <div class="container"> 
         <div class="inner">
           <div class="logo-block"> <a class="logo" href="/"><img class="logo" src="/img/logo-bottom.svg"/></a>
@@ -524,10 +524,10 @@
               <div class="menu-wrap">
                 <div class="title">Меню</div>
                 <ul class="links"> 
-                  <li class="link__item"> <a class="link" href="#">О нас</a></li>
-                  <li class="link__item"> <a class="link" href="#">Каталог</a></li>
-                  <li class="link__item"> <a class="link" href="#">Партнеры</a></li>
-                  <li class="link__item"> <a class="link" href="#">Контакты</a></li>
+                  <li class="link__item"> <a class="nav-link" href="about">О нас</a></li>
+                  <li class="link__item"> <a class="nav-link" href="catalog">Каталог</a></li>
+                  <li class="link__item"> <a class="nav-link" href="partners">Партнеры</a></li>
+                  <li class="link__item"> <a class="nav-link" href="contacts">Контакты</a></li>
                 </ul>
               </div>
               <div class="confidencial">Политика конфиденциальности</div>

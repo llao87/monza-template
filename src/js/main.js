@@ -25,17 +25,32 @@ jQuery(function () {
     // Запуск анимации при прокрутке
     const wow = new WOW({
         boxClass: "wow" /* класс, который необходим для работы wow.js */,
-        animateClass:
-            "animate__animated" /* класс, который будет автоматически добавляться анимируемым элементам при прокрутке страницы */,
-        offset: 30 /* по-умолчанию установлено значение 0, то есть как только при прокрутке страницы, элемент достигает низа окна браузера проигрываться анимация, в данном случае анимация начнется на 30px выше от низа окна браузера */,
+        animateClass: "animate__animated" /* класс, который будет автоматически добавляться анимируемым элементам при прокрутке страницы */,
+        offset: 40 /* по-умолчанию установлено значение 0, то есть как только при прокрутке страницы, элемент достигает низа окна браузера проигрываться анимация, в данном случае анимация начнется на 30px выше от низа окна браузера */,
         mobile: true /* если true, то на мобильных тоже будет анимация, если false, то на мобильных анимация отключается */,
         live: true /* если true, то анимация будет работать даже на динамически добавляемых элементах, если false, то только на тех элементах, которые были на странице при ее загрузке */,
     });
     wow.init(); /* Инициализация плагина с установленными выше свойствами */
 
+    // Прокрутка по якорям
+    const anchors = document.querySelectorAll('a.nav-link');
+    for (let anchor of anchors) {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const blockID = anchor.getAttribute("href");
+
+            document.getElementById(blockID).scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+            });
+        });
+    }
+
     // Карусель в промо блоке
     const promoCarousel = new Swiper(".promo-slider", {
         loop: true,
+        speed: 1600,
         spaceBetween: 28,
         slidesPerView: 1,
         breakpoints: {
@@ -67,7 +82,7 @@ jQuery(function () {
 
     // Карусель категорий
     const categoriesCarousel = new Swiper(".js__categories-slider .swiper", {
-        speed: 800,
+        speed: 1200,
         spaceBetween: 28,
         slidesPerView: 4,
         mousewheel: {
