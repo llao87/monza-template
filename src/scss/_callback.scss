@@ -121,7 +121,7 @@
                             }
 
                             .agree {
-                                display: block;
+                                display: flex;
                                 font-size: 2.2rem;
                                 line-height: 1.25;
                                 margin: -0.5rem 0 0 0;
@@ -132,9 +132,70 @@
                             margin: 7.8rem 0 0 0;
                             display: flex;
                             align-items: flex-start;
+
+                            .input--check {
+                                position: absolute;
+                                z-index: -1;
+                                opacity: 0;
+                                display: block;
+                                width: 0;
+                                height: 0;
+                            }
+                            .input--check + .agree:before,
+                            .input--check:checked + .agree:before {
+                                background-image: url(/img/input--check.svg);
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                                width: 2rem;
+                                height: 2rem;
+                                display: block;
+                                position: relative;
+                                left: 0;
+                                top: 0;
+                                content: "";
+                                flex: none;
+                                margin: 0.4rem 1.8rem 0 0;
+                            }
+
+                            /* Checked */
+                            .input--check:checked + .agree:before {
+                                background-image: url(/img/input--check-y.svg);
+                            }
+
+                            /* Focus */
+                            .focused span:before {
+                                box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+                            }
+
+                            /* Hover */
+                            .checkbox-other span:hover:before {
+                                filter: brightness(110%);
+                            }
+
+                            /* Active */
+                            .checkbox-other span:active:before {
+                                filter: brightness(80%);
+                            }
+
+                            /* Disabled */
+                            .input--check:disabled + .agree {
+                                color: #666;
+                                cursor: default;
+                            }
+                            .checkbox-other
+                                input[type="checkbox"]:disabled
+                                + .agree:before {
+                                filter: grayscale(100%);
+                                opacity: 0.6;
+                            }
                         }
                     }
                     .controls {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
                         .submit {
                             font-size: 4.2rem;
                             color: #fff;
@@ -152,6 +213,40 @@
                             &:hover {
                                 background: #fff;
                                 color: #1c1d21;
+                            }
+                        }
+
+                        .socials {
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            margin: 9.8rem 0 7.8rem 0;
+                            .soc-link {
+                                width: 5.6rem;
+                                height: 5.6rem;
+                                margin: 0 2.6rem 0 0;
+                                cursor: pointer;
+                                text-decoration: none;
+                                border-radius: 10rem;
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                background-size: contain;
+                                background-color: #fff;
+                                border: 0.1rem solid #1c1d21;
+                                transition: all 0.3s linear;
+
+                                &:hover {
+                                    transform: scale(1.1);
+                                }
+                            }
+                            .soc-link__tg {
+                                background-image: url(/img/icon-telegram.svg);
+                            }
+                            .soc-link__wa {
+                                background-image: url(/img/icon-whatsapp.svg);
+                            }
+                            .soc-link__vk {
+                                background-image: url(/img/icon-vk.svg);
                             }
                         }
                     }

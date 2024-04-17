@@ -18,9 +18,14 @@ section.callback.wow.animate__animated.animate__fadeInUp(data-wow-duration="3s")
                         .field 
                             input.input--text(placeholder="+7 (900) 000-00-00" type="tel")
 
-                        .field.field--agree 
-                            input.input--check(type="checkbox") 
+                        label.field.field--agree(for="agree") 
+                            input#agree.input--check(type="checkbox") 
                             span.agree Я согласен(на) с политикой конфиденциальности и даю согласие на обработку персональных данных
 
                     .controls 
                         input.submit(type="submit" value="Отправить")
+
+                        .socials 
+                            a.soc-link.soc-link__tg(href="#")
+                            a.soc-link.soc-link__wa(href="#")
+                            a.soc-link.soc-link__vk(href="#")

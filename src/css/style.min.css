@@ -6112,7 +6112,7 @@ header .container .lang-selector .select2-container--default .selection .select2
 
 .promo .container .promo-slider-wrap .promo-slider {
   width: 100%;
-  height: 110.5rem;
+  height: 78.5rem;
   border-radius: 1.8rem;
   margin-bottom: 2.8rem;
 }
@@ -6280,6 +6280,7 @@ header .container .lang-selector .select2-container--default .selection .select2
   margin: 0 0.25rem !important;
   border-radius: 5rem;
   opacity: 1;
+  background-color: #1c1d21;
 }
 .promo .container .promo-slider-wrap .promo__dots .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background: #fff;
@@ -6560,6 +6561,8 @@ header .container .lang-selector .select2-container--default .selection .select2
   position: fixed;
   top: 0;
   left: 0;
+  width: 100vw;
+  height: 100vh;
   z-index: 50;
 }
 .modal.js-modal .container {
@@ -6815,7 +6818,9 @@ header .container .lang-selector .select2-container--default .selection .select2
   width: 1.8rem;
   height: 1.8rem;
   left: -1.3rem;
-  top: 0;
+  top: -0.1rem;
+  left: -19%;
+  top: -1%;
   -webkit-transform: translateY(0%) rotate(180deg);
       -ms-transform: translateY(0%) rotate(180deg);
           transform: translateY(0%) rotate(180deg);
@@ -6823,8 +6828,8 @@ header .container .lang-selector .select2-container--default .selection .select2
 .modal.js-modal .container .close-modal::after {
   top: auto;
   left: auto;
-  right: -0.1rem;
-  bottom: -1.3rem;
+  right: -1%;
+  bottom: -19%;
   -webkit-transform: translateY(0) rotate(180deg);
       -ms-transform: translateY(0) rotate(180deg);
           transform: translateY(0) rotate(180deg);
@@ -7128,7 +7133,9 @@ header .container .lang-selector .select2-container--default .selection .select2
   background-color: #1c1d21;
 }
 .callback .container .bottom-screen .form-screen .form#callback .fields .field .agree {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-size: 2.2rem;
   line-height: 1.25;
   margin: -0.5rem 0 0 0;
@@ -7142,6 +7149,72 @@ header .container .lang-selector .select2-container--default .selection .select2
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  /* Checked */
+  /* Focus */
+  /* Hover */
+  /* Active */
+  /* Disabled */
+}
+.callback .container .bottom-screen .form-screen .form#callback .fields .field--agree .input--check {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  display: block;
+  width: 0;
+  height: 0;
+}
+.callback .container .bottom-screen .form-screen .form#callback .fields .field--agree .input--check + .agree:before,
+.callback .container .bottom-screen .form-screen .form#callback .fields .field--agree .input--check:checked + .agree:before {
+  background-image: url(/img/input--check.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 2rem;
+  height: 2rem;
+  display: block;
+  position: relative;
+  left: 0;
+  top: 0;
+  content: "";
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  margin: 0.4rem 1.8rem 0 0;
+}
+.callback .container .bottom-screen .form-screen .form#callback .fields .field--agree .input--check:checked + .agree:before {
+  background-image: url(/img/input--check-y.svg);
+}
+.callback .container .bottom-screen .form-screen .form#callback .fields .field--agree .focused span:before {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+.callback .container .bottom-screen .form-screen .form#callback .fields .field--agree .checkbox-other span:hover:before {
+  -webkit-filter: brightness(110%);
+          filter: brightness(110%);
+}
+.callback .container .bottom-screen .form-screen .form#callback .fields .field--agree .checkbox-other span:active:before {
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+}
+.callback .container .bottom-screen .form-screen .form#callback .fields .field--agree .input--check:disabled + .agree {
+  color: #666;
+  cursor: default;
+}
+.callback .container .bottom-screen .form-screen .form#callback .fields .field--agree .checkbox-other input[type=checkbox]:disabled + .agree:before {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  opacity: 0.6;
+}
+.callback .container .bottom-screen .form-screen .form#callback .controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .callback .container .bottom-screen .form-screen .form#callback .controls .submit {
   font-size: 4.2rem;
@@ -7161,6 +7234,47 @@ header .container .lang-selector .select2-container--default .selection .select2
 .callback .container .bottom-screen .form-screen .form#callback .controls .submit:hover {
   background: #fff;
   color: #1c1d21;
+}
+.callback .container .bottom-screen .form-screen .form#callback .controls .socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 9.8rem 0 7.8rem 0;
+}
+.callback .container .bottom-screen .form-screen .form#callback .controls .socials .soc-link {
+  width: 5.6rem;
+  height: 5.6rem;
+  margin: 0 2.6rem 0 0;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 10rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: #fff;
+  border: 0.1rem solid #1c1d21;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.callback .container .bottom-screen .form-screen .form#callback .controls .socials .soc-link:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.callback .container .bottom-screen .form-screen .form#callback .controls .socials .soc-link__tg {
+  background-image: url(/img/icon-telegram.svg);
+}
+.callback .container .bottom-screen .form-screen .form#callback .controls .socials .soc-link__wa {
+  background-image: url(/img/icon-whatsapp.svg);
+}
+.callback .container .bottom-screen .form-screen .form#callback .controls .socials .soc-link__vk {
+  background-image: url(/img/icon-vk.svg);
 }
 .callback .container .bottom-screen .left-block {
   width: 50%;

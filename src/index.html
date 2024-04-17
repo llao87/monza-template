@@ -20,7 +20,7 @@
             <li class="nav-item"><a class="nav-link" href="contacts">Контакты</a></li>
           </ul>
         </navigation>
-        <div class="lang-selector"><span class="btn btn--callback js__header-callback"> Связаться с нами</span>
+        <div class="lang-selector">
           <select class="js-example-basic-single" name="lang">
             <option value="RU">RU</option>
             <option value="EN">EN</option>
@@ -501,12 +501,13 @@
                 <div class="field"> 
                   <input class="input--text" placeholder="+7 (900) 000-00-00" type="tel"/>
                 </div>
-                <div class="field field--agree"> 
-                  <input class="input--check" type="checkbox"/><span class="agree">Я согласен(на) с политикой конфиденциальности и даю согласие на обработку персональных данных</span>
-                </div>
+                <label class="field field--agree" for="agree"> 
+                  <input class="input--check" id="agree" type="checkbox"/><span class="agree">Я согласен(на) с политикой конфиденциальности и даю согласие на обработку персональных данных</span>
+                </label>
               </div>
               <div class="controls"> 
                 <input class="submit" type="submit" value="Отправить"/>
+                <div class="socials"> <a class="soc-link soc-link__tg" href="#"></a><a class="soc-link soc-link__wa" href="#"></a><a class="soc-link soc-link__vk" href="#"></a></div>
               </div>
             </div>
           </div>

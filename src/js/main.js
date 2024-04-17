@@ -8,6 +8,18 @@ jQuery(function () {
         minimumResultsForSearch: Infinity,
     });
 
+    $(document).on("mouseenter", ".select2-container", function (e) {
+        jQuery(this).prev("select").select2("open");
+    });
+    $(document).on("mouseleave", ".select2-container", function (e) {
+        if (
+            $(e.toElement || e.relatedTarget).closest(".select2-container")
+                .length == 0
+        ) {
+            jQuery("select").select2("close");
+        }
+    });
+
     // Запуск видео
     jQuery(".js__play-video").on("click", function () {
         let videoEl = jQuery(this)
@@ -25,7 +37,8 @@ jQuery(function () {
     // Запуск анимации при прокрутке
     const wow = new WOW({
         boxClass: "wow" /* класс, который необходим для работы wow.js */,
-        animateClass: "animate__animated" /* класс, который будет автоматически добавляться анимируемым элементам при прокрутке страницы */,
+        animateClass:
+            "animate__animated" /* класс, который будет автоматически добавляться анимируемым элементам при прокрутке страницы */,
         offset: 40 /* по-умолчанию установлено значение 0, то есть как только при прокрутке страницы, элемент достигает низа окна браузера проигрываться анимация, в данном случае анимация начнется на 30px выше от низа окна браузера */,
         mobile: true /* если true, то на мобильных тоже будет анимация, если false, то на мобильных анимация отключается */,
         live: true /* если true, то анимация будет работать даже на динамически добавляемых элементах, если false, то только на тех элементах, которые были на странице при ее загрузке */,
@@ -33,7 +46,7 @@ jQuery(function () {
     wow.init(); /* Инициализация плагина с установленными выше свойствами */
 
     // Прокрутка по якорям
-    const anchors = document.querySelectorAll('a.nav-link');
+    const anchors = document.querySelectorAll("a.nav-link");
     for (let anchor of anchors) {
         anchor.addEventListener("click", function (e) {
             e.preventDefault();
@@ -141,5 +154,16 @@ jQuery(function () {
             el: ".nested-slider-child .promo__dots",
             clickable: true,
         },
+    });
+
+    $(window).keyup(function (e) {
+        var target = $(".input--check:focus");
+        if (e.keyCode == 9 && $(target).length) {
+            $(target).parent().addClass("focused");
+        }
+    });
+
+    $(".input--check").focusout(function () {
+        $(this).parent().removeClass("focused");
     });
 });
